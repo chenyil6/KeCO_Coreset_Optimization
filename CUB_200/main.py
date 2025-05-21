@@ -3,7 +3,7 @@ from inferencers_mixup import *
 import logging
 from transformers import AutoTokenizer, CLIPModel,AutoProcessor, AutoModelForVision2Seq
 import sys
-sys.path.append('/path/to/KeCo')
+sys.path.append('/path/to/KeCO_Coreset_Optimization')
 from open_flamingo_v2.open_flamingo.src.factory import create_model_and_transforms
 from transformers import IdeficsForVisionText2Text, AutoProcessor
 import json
