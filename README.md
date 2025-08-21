@@ -1,4 +1,4 @@
-# Enhancing Multimodal In-Context Learning for Image Classification through Coreset Optimization (ACM MM 2025, Poster)
+# Enhancing Multimodal In-Context Learning for Image Classification through Coreset Optimization (ACM MM 2025)
 
 This is the official project repository for our paper *Enhancing Multimodal In-Context Learning for Image Classification through Coreset Optimization.*
 
