@@ -55,8 +55,12 @@ class Online_ICL:
         self.retriever = DynamicReteiever(args)
         self.predictions = []
         self.topk = 1
-        self.embedding_model = CLIPModel.from_pretrained('openai/clip-vit-large-patch14-336').to("cuda:0")
-        self.embedding_processor = AutoProcessor.from_pretrained('openai/clip-vit-large-patch14-336')
+        if self.args.model == "open_flamingo_3b:
+            self.embedding_model = CLIPModel.from_pretrained('openai/clip-vit-large-patch14-336').to("cuda:0")
+            self.embedding_processor = AutoProcessor.from_pretrained('openai/clip-vit-large-patch14-336')
+        else:
+            self.embedding_model = AutoModel.from_pretrained("google/siglip-so400m-patch14-384").to("cuda:0")
+            self.embedding_processor = AutoProcessor.from_pretrained("google/siglip-so400m-patch14-384")
         self.no_kv_caching = False
         with open("./train_data_options.json", 'r') as f:
             self.train_options_dict = json.load(f)
